@@ -12,7 +12,6 @@ defmodule NeoDGM.BitmapFont do
       HangulJamoSource,
       HangulSyllables,
       Trigrams,
-      Components.ShortCapitals,
       Components.Diacritics
     ]
     |> Enum.map(&Module.concat(__MODULE__, &1))
@@ -22,13 +21,16 @@ defmodule NeoDGM.BitmapFont do
       BasicLatin,
       GeneralPunctuation,
       Latin1Supplement,
-      PowerlineSymbols
+      PowerlineSymbols,
+      Components.ShortCapitals
     ]
     |> Enum.map(&Module.concat(__MODULE__, &1))
 
   pro_glyph_sources =
     [
-      Pro.BasicLatin
+      Pro.BasicLatin,
+      Pro.Latin1Supplement,
+      Pro.Components.ShortCapitals
     ]
     |> Enum.map(&Module.concat(__MODULE__, &1))
 
